@@ -1,4 +1,4 @@
-﻿using FileRead.Application;
+﻿using FileRead.Application.Commands;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -101,7 +101,7 @@ namespace FileRead
         private static void PrintHeader()
         {
             Console.WriteLine();
-            Console.WriteLine(" [↑] - [↓] - [PgUp] - [PgDn] - [ [L] -> [Buscar Índice] ] ");
+            Console.WriteLine(" [↑] - [↓] - [PgUp] - [PgDn] - [ [L] -> [Buscar Índice] ] - [ [ESC] - Sair ] ");
             Console.WriteLine();
         }
 
