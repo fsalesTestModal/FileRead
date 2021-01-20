@@ -7,11 +7,11 @@ namespace FileRead
     public class FileReader : IFileReader
     {
         long index;
-        int qtdrows;
-        int qtdRownBuffer;
-        string filePath;
-        List<string> linesToShow;
-        Dictionary<long, string> listBuffer;
+        readonly int qtdrows;
+        readonly int qtdRownBuffer;
+        readonly string filePath;
+        readonly List<string> linesToShow;
+        readonly Dictionary<long, string> listBuffer;
         public FileReader(string filePath, int qtdLinhas)
         {
             this.filePath = filePath;
