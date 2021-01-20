@@ -8,6 +8,7 @@ namespace FileRead
     {
         long index;
         int qtdrows;
+        int qtdRownBuffer;
         string filePath;
         List<string> linesToShow;
         Dictionary<long, string> listBuffer;
@@ -15,6 +16,7 @@ namespace FileRead
         {
             this.filePath = filePath;
             this.qtdrows = qtdLinhas;
+            this.qtdRownBuffer = 100;
             linesToShow = new List<string>();
             listBuffer = new Dictionary<long, string>();
             LoadBuffer(0);
@@ -54,7 +56,7 @@ namespace FileRead
             listBuffer.Clear();
 
             using StreamReader streamReader = new StreamReader(filePath);
-            for (int i = 0; i < (newIndex + 100); i++)
+            for (int i = 0; i < (newIndex + qtdRownBuffer); i++)
             {
                 if (streamReader.EndOfStream)
                     return;
