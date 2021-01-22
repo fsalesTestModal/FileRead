@@ -53,15 +53,15 @@ namespace FileRead
                     
                     PrintHeader();
 
-                    bool success;
+                    bool isSuccess;
 
                     do
                     {
                         Console.WriteLine("Digite o  nº da Linha que deseja visualizar: ");
 
-                        success = long.TryParse(Console.ReadLine(), out long userIndex);
+                        isSuccess = long.TryParse(Console.ReadLine(), out long userIndex);
 
-                        if (success)
+                        if (isSuccess)
                         {
                             index = keyL.ReturnIndex(userIndex);
                         }
@@ -70,7 +70,7 @@ namespace FileRead
                             Console.WriteLine("Não é um nº válido: ");
                         }
 
-                    } while (!success);
+                    } while (!isSuccess);
               
                     break;
 
