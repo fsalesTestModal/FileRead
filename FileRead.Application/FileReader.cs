@@ -51,7 +51,8 @@ namespace FileRead
 
         private void LoadBuffer(long newIndex)
         {
-            newIndex = newIndex <= qtdrows ? 0 : newIndex - 50;
+            newIndex = (newIndex + qtdrows) - 50;
+            newIndex = newIndex <= qtdrows ? 0 : newIndex;
 
             listBuffer.Clear();
 
